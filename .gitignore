@@ -1,9 +1,19 @@
-myenv/
-.env
-*.pyc
-__pycache__/
-Processing_Video/
-Processed_Video/
+# Project-specific directories
+Processing_Media/
+Processed_Media/
 Result_Text/
 Result_Archive/
+
+# Virtual Environment
+myenv/
+
+# Environment variables
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# OS-generated files
+.DS_Store
 
