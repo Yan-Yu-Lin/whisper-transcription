@@ -1,0 +1,9 @@
+myenv/
+.env
+*.pyc
+__pycache__/
+Processing_Video/
+Processed_Video/
+Result_Text/
+Result_Archive/
+
