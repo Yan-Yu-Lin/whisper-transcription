@@ -28,7 +28,8 @@ def create_folders():
 
 def extract_audio(media_path):
     """Extract audio from video file or return path if already audio."""
-    if media_path.lower().endswith('.mp3'):
+    audio_extensions = ('.mp3', '.m4a', '.wav', '.aac', '.ogg')
+    if media_path.lower().endswith(audio_extensions):
         return media_path
     video = VideoFileClip(media_path)
     audio_path = media_path.rsplit(".", 1)[0] + ".mp3"
@@ -76,14 +77,17 @@ def transcribe_audio(audio_path):
 def process_media():
     """Process all media files in the Processing_Media folder."""
     for media_file in os.listdir(PROCESSING_MEDIA):
-        if media_file.lower().endswith(('.mp4', '.avi', '.mov', '.mkv', '.mp3')):
+        if media_file.lower().endswith(('.mp4', '.avi', '.mov', '.mkv', '.mp3', '.m4a')):
             media_path = os.path.join(PROCESSING_MEDIA, media_file)
+            print(f"path_way:{media_path}")
             
             # Extract audio or use MP3 directly
             audio_path = extract_audio(media_path)
+            print(audio_path)
             
             # Transcribe audio
             transcription = transcribe_audio(audio_path)
+            print(transcription)
             
             # Save transcription
             text_file = os.path.join(RESULT_TEXT, f"{os.path.splitext(media_file)[0]}.txt")
