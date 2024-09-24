@@ -6,6 +6,7 @@ Result_Archive/
 
 # Virtual Environment
 myenv/
+.venv/
 
 # Environment variables
 .env
@@ -16,6 +17,3 @@ __pycache__/
 
 # OS-generated files
 .DS_Store
-
-#Others
-..bfg-report
