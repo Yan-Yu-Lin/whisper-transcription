@@ -77,7 +77,7 @@ def transcribe_audio(audio_path):
 def process_media():
     """Process all media files in the Processing_Media folder."""
     for media_file in os.listdir(PROCESSING_MEDIA):
-        if media_file.lower().endswith(('.mp4', '.avi', '.mov', '.mkv', '.mp3', '.m4a')):
+        if media_file.lower().endswith(('.mp4', '.avi', '.mov', '.mkv', '.mp3', '.m4a', 'wav')):
             media_path = os.path.join(PROCESSING_MEDIA, media_file)
             print(f"path_way:{media_path}")
             
